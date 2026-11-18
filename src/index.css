@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#FEFDFD] text-[#040101] dark:bg-black dark:text-white font-sans antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  ::selection {
+    @apply bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black;
+  }
+
+  /* Custom minimalist scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-[#FEFDFD] dark:bg-black;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#BA2F2F]/40 hover:bg-[#BA2F2F] dark:bg-neutral-800 dark:hover:bg-neutral-600;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-28 lg:py-32;
+  }
+
+  .section-eyebrow {
+    @apply text-xs uppercase font-semibold tracking-[0.36em] text-[#BA2F2F] dark:text-neutral-400 mb-3 block;
+  }
+
+  .section-title {
+    @apply font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.05em] leading-[0.98] text-[#040101] dark:text-white;
+  }
+
+  .section-subtitle {
+    @apply text-[#040101]/75 dark:text-neutral-400 text-base sm:text-lg max-w-2xl font-normal leading-relaxed;
+  }
+
+  .gallery-card {
+    @apply border border-[#BA2F2F] dark:border-neutral-800 bg-[#FEFDFD] dark:bg-black transition-all;
+  }
+
+  .gallery-card:hover {
+    @apply border-[#BA2F2F] dark:border-neutral-600;
+  }
+
+  /* Legacy alias so any remaining glass-card uses gallery style */
+  .glass-card {
+    @apply border border-[#BA2F2F] dark:border-neutral-800 bg-[#FEFDFD] dark:bg-black;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#BA2F2F] bg-[#BA2F2F] text-[#FEFDFD] hover:bg-[#FEFDFD] hover:text-[#BA2F2F] dark:border-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-[#BA2F2F] bg-transparent text-[#BA2F2F] hover:bg-[#BA2F2F] hover:text-[#FEFDFD] dark:border-neutral-700 dark:text-white dark:hover:bg-white dark:hover:text-black px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] transition-all duration-200;
+  }
+
+  .skill-pill {
+    @apply px-3 py-1.5 text-xs font-mono uppercase tracking-[0.1em]
+      bg-transparent text-[#040101] dark:text-neutral-200
+      border border-[#BA2F2F]/40 dark:border-neutral-800
+      hover:border-[#BA2F2F] hover:text-[#BA2F2F] dark:hover:border-neutral-500
+      transition-colors duration-150 cursor-default;
+  }
+
+  .placeholder-box {
+    @apply border border-dashed border-[#BA2F2F]/60 dark:border-neutral-700
+      bg-[#BA2F2F]/5 dark:bg-neutral-950/70
+      p-4 text-xs text-[#040101] dark:text-neutral-300;
+  }
+}
+
+/* Red borders and elements across light theme throughout the whole website */
+html:not(.dark) .border-black {
+  border-color: #BA2F2F;
+}
+
+html:not(.dark) .border-black\/40,
+html:not(.dark) .border-black\/30 {
+  border-color: rgba(186, 47, 47, 0.45);
+}
+
+html:not(.dark) .border-black\/20,
+html:not(.dark) .border-black\/10 {
+  border-color: rgba(186, 47, 47, 0.25);
+}
+
+html:not(.dark) .border-neutral-100,
+html:not(.dark) .border-neutral-200,
+html:not(.dark) .border-neutral-300 {
+  border-color: rgba(186, 47, 47, 0.2);
+}
+
+html:not(.dark) .bg-white {
+  background-color: #FEFDFD;
+}
+
+html:not(.dark) .bg-black {
+  background-color: #BA2F2F;
+  color: #FEFDFD;
+}
+
+html:not(.dark) .text-black {
+  color: #040101;
+}
