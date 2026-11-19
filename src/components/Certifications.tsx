@@ -71,10 +71,10 @@ const Certifications: React.FC = () => {
               <div>
                 {/* Header with index and issuer */}
                 <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#BA2F2F]/20 dark:border-neutral-900">
-                  <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
+                  <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
                     CERT #{String(idx + 1).padStart(2, '0')}
                   </span>
-                  <span className="border border-[#BA2F2F] dark:border-neutral-700 text-[10px] font-mono uppercase tracking-[0.14em] px-2 py-0.5 text-[#BA2F2F] dark:text-neutral-300 font-semibold">
+                  <span className="border border-[#BA2F2F] dark:border-neutral-700 text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 text-[#BA2F2F] dark:text-neutral-300 font-semibold">
                     {cert.category}
                   </span>
                 </div>
@@ -121,7 +121,7 @@ const Certifications: React.FC = () => {
             <p className="text-xs uppercase tracking-[0.2em] font-semibold text-[#BA2F2F] dark:text-white mb-1">
               Expanded Repository
             </p>
-            <p className="text-xs text-[#040101]/75 dark:text-neutral-400 font-mono">
+            <p className="text-xs text-[#040101]/75 dark:text-neutral-400">
               Additional certifications and course completions continuously indexed.
             </p>
           </div>
@@ -148,11 +148,11 @@ const Certifications: React.FC = () => {
               </p>
             </div>
             <div className="border border-dashed border-[#BA2F2F]/50 dark:border-neutral-700 w-full max-w-md h-48 flex items-center justify-center bg-[#BA2F2F]/5 dark:bg-neutral-950">
-              <span className="text-xs font-mono uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-zinc-500 font-semibold">
+              <span className="text-xs uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-zinc-500 font-semibold">
                 Official PDF/Image Preview
               </span>
             </div>
-            <p className="text-[11px] font-mono text-[#040101]/60 dark:text-neutral-600">
+            <p className="text-[11px] text-[#040101]/60 dark:text-neutral-600">
               Asset Path: public/assets/certificates/
             </p>
           </div>

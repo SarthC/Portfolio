@@ -39,7 +39,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, title, childre
         {/* Header with Title & Close button */}
         <div className="flex items-center justify-between p-6 border-b border-[#BA2F2F]/20 dark:border-neutral-800">
           <div>
-            <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-[#BA2F2F] dark:text-neutral-500 block mb-1 font-semibold">
+            <span className="text-[10px] uppercase tracking-[0.24em] text-[#BA2F2F] dark:text-neutral-500 block mb-1 font-semibold">
               DOCUMENT PREVIEW
             </span>
             <h3 className="font-heading text-lg font-semibold tracking-tight text-[#040101] dark:text-white pr-4">

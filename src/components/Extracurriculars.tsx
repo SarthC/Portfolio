@@ -91,7 +91,7 @@ const Extracurriculars: React.FC = () => {
                 <Trophy size={14} className="text-[#BA2F2F]" />
                 Athletics &amp; Sports
               </h3>
-              <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 uppercase font-bold">
+              <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 uppercase font-bold">
                 3x Medalist
               </span>
             </div>
@@ -112,10 +112,10 @@ const Extracurriculars: React.FC = () => {
                     className="border border-[#BA2F2F] dark:border-neutral-700 p-3 bg-[#BA2F2F]/5 dark:bg-neutral-950 text-center"
                   >
                     <Medal size={16} className="mx-auto mb-1 text-[#BA2F2F] dark:text-white" />
-                    <span className="block text-[11px] font-mono font-bold text-[#040101] dark:text-white">
+                    <span className="block text-[11px] font-bold text-[#040101] dark:text-white">
                       {m.rank}
                     </span>
-                    <span className="block text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-400 font-semibold">
+                    <span className="block text-[10px] text-[#BA2F2F] dark:text-neutral-400 font-semibold">
                       {m.year}
                     </span>
                   </div>
@@ -148,7 +148,7 @@ const Extracurriculars: React.FC = () => {
               <h3 className="text-xs uppercase tracking-[0.24em] font-semibold text-[#040101] dark:text-white flex items-center gap-2">
                 Club Leadership &amp; Initiatives
               </h3>
-              <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 uppercase font-bold">
+              <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 uppercase font-bold">
                 3 Organizations
               </span>
             </div>
@@ -163,7 +163,7 @@ const Extracurriculars: React.FC = () => {
                     <h4 className="font-heading text-base font-semibold tracking-[-0.02em] text-[#040101] dark:text-white">
                       {club.name}
                     </h4>
-                    <span className="text-[10px] font-mono uppercase tracking-[0.16em] text-[#BA2F2F] dark:text-neutral-400 font-bold">
+                    <span className="text-[10px] uppercase tracking-[0.16em] text-[#BA2F2F] dark:text-neutral-400 font-bold">
                       {club.year}
                     </span>
                   </div>
@@ -204,7 +204,7 @@ const Extracurriculars: React.FC = () => {
                 <h4 className="font-heading text-base font-semibold tracking-tight text-[#040101] dark:text-white mb-2">
                   {hobby.name}
                 </h4>
-                <p className="text-xs text-[#040101]/75 dark:text-neutral-400 leading-relaxed font-mono">
+                <p className="text-xs text-[#040101]/75 dark:text-neutral-400 leading-relaxed">
                   {hobby.description}
                 </p>
               </div>

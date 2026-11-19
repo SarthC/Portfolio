@@ -50,7 +50,7 @@ const Skills: React.FC = () => {
                 <h3 className="text-xs uppercase tracking-[0.24em] font-semibold text-[#040101] dark:text-white">
                   {category.name}
                 </h3>
-                <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 font-bold">
+                <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 font-bold">
                   {category.skills.length} TOOLS
                 </span>
               </div>

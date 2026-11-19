@@ -7,32 +7,22 @@
 @layer base {
   *,
   *::before,
-  *::after {
-    font-family: 'Panchang', sans-serif;
-  }
-
-  code,
-  pre,
-  kbd,
-  samp,
-  .font-mono,
-  .font-mono * {
-    font-family: 'Geist Mono', monospace !important;
+  *::after,
+  html,
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p, span, a, div, li, ul, ol,
+  button, input, optgroup, select, textarea {
+    font-family: 'Panchang', sans-serif !important;
   }
 
   html {
     scroll-behavior: smooth;
-    font-family: 'Panchang', sans-serif;
   }
 
   body {
     @apply bg-[#FEFDFD] text-[#040101] dark:bg-black dark:text-white antialiased;
-    font-family: 'Panchang', sans-serif;
     transition: background-color 0.2s ease, color 0.2s ease;
-  }
-
-  button, input, optgroup, select, textarea {
-    font-family: 'Panchang', sans-serif;
   }
 
   ::selection {
@@ -95,11 +85,12 @@
   }
 
   .skill-pill {
-    @apply px-3 py-1.5 text-xs font-mono uppercase tracking-[0.1em]
+    @apply px-3 py-1.5 text-xs uppercase tracking-[0.1em]
       bg-transparent text-[#040101] dark:text-neutral-200
       border border-[#BA2F2F]/40 dark:border-neutral-800
       hover:border-[#BA2F2F] hover:text-[#BA2F2F] dark:hover:border-neutral-500
       transition-colors duration-150 cursor-default;
+    font-family: 'Panchang', sans-serif !important;
   }
 
   .placeholder-box {

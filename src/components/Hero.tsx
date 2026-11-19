@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#BA2F2F] dark:text-neutral-400">
                   UNDERGRADUATE EDUCATION
                 </span>
-                <span className="inline-flex items-center gap-1 border border-[#BA2F2F] dark:border-neutral-700 px-2.5 py-0.5 text-xs font-mono font-semibold text-[#BA2F2F] dark:text-white">
+                <span className="inline-flex items-center gap-1 border border-[#BA2F2F] dark:border-neutral-700 px-2.5 py-0.5 text-xs font-semibold text-[#BA2F2F] dark:text-white">
                   <Award size={12} className="mr-0.5" /> CGPA 8.52
                 </span>
               </div>
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
               <p className="text-sm text-[#040101]/80 dark:text-neutral-400 mb-4">
                 MIT Art, Design and Technology University, Pune
               </p>
-              <div className="flex items-center gap-2 text-xs font-mono text-[#040101]/60 dark:text-neutral-500 border-t border-[#BA2F2F]/20 dark:border-neutral-900 pt-3">
+              <div className="flex items-center gap-2 text-xs text-[#040101]/60 dark:text-neutral-500 border-t border-[#BA2F2F]/20 dark:border-neutral-900 pt-3">
                 <Calendar size={13} />
                 <span>Aug 2024 – May 2028</span>
               </div>
@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
                 <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#BA2F2F] dark:text-neutral-400">
                   HIGHER SECONDARY
                 </span>
-                <span className="inline-flex items-center gap-1 border border-[#BA2F2F] dark:border-neutral-700 px-2.5 py-0.5 text-xs font-mono text-[#BA2F2F] dark:text-white font-semibold">
+                <span className="inline-flex items-center gap-1 border border-[#BA2F2F] dark:border-neutral-700 px-2.5 py-0.5 text-xs text-[#BA2F2F] dark:text-white font-semibold">
                   <GraduationCap size={12} className="mr-0.5" /> High School
                 </span>
               </div>
@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
               <p className="text-sm text-[#040101]/80 dark:text-neutral-400 mb-4">
                 Sir Parashurambhau College, Pune
               </p>
-              <div className="flex items-center gap-2 text-xs font-mono text-[#040101]/60 dark:text-neutral-500 border-t border-[#BA2F2F]/20 dark:border-neutral-900 pt-3">
+              <div className="flex items-center gap-2 text-xs text-[#040101]/60 dark:text-neutral-500 border-t border-[#BA2F2F]/20 dark:border-neutral-900 pt-3">
                 <Calendar size={13} />
                 <span>Aug 2022 – May 2024</span>
               </div>

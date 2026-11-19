@@ -36,10 +36,10 @@ const Hackathons: React.FC = () => {
               <div>
                 {/* Header row: Index & Achievement Badge */}
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#BA2F2F]/20 dark:border-neutral-900">
-                  <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
+                  <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
                     EVENT #{String(idx + 1).padStart(2, '0')}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 border border-[#BA2F2F] dark:border-neutral-700 text-[10px] font-mono uppercase tracking-[0.14em] px-2.5 py-1 text-[#BA2F2F] dark:text-white font-semibold">
+                  <span className="inline-flex items-center gap-1.5 border border-[#BA2F2F] dark:border-neutral-700 text-[10px] uppercase tracking-[0.14em] px-2.5 py-1 text-[#BA2F2F] dark:text-white font-semibold">
                     <Trophy size={11} className="mr-0.5 text-[#BA2F2F] dark:text-white" />
                     {hack.achievement}
                   </span>
@@ -51,7 +51,7 @@ const Hackathons: React.FC = () => {
                 </h3>
 
                 {/* Date & Location metadata */}
-                <div className="flex flex-wrap items-center gap-4 text-xs font-mono uppercase tracking-[0.12em] text-[#040101]/70 dark:text-neutral-400 mb-4">
+                <div className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.12em] text-[#040101]/70 dark:text-neutral-400 mb-4">
                   <span className="inline-flex items-center gap-1.5">
                     <Calendar size={13} className="text-[#BA2F2F]" />
                     {hack.date}
@@ -69,7 +69,7 @@ const Hackathons: React.FC = () => {
 
                 {/* Team & Project Details */}
                 {(hack.teamName || hack.projectShowcased) && (
-                  <div className="flex flex-wrap gap-4 text-xs font-mono uppercase tracking-[0.12em] py-3 border-t border-b border-[#BA2F2F]/20 dark:border-neutral-900 mb-6 text-[#040101] dark:text-neutral-300">
+                  <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.12em] py-3 border-t border-b border-[#BA2F2F]/20 dark:border-neutral-900 mb-6 text-[#040101] dark:text-neutral-300">
                     {hack.teamName && (
                       <div>
                         <span className="text-[#BA2F2F] dark:text-neutral-500 font-semibold">TEAM: </span>
@@ -104,7 +104,7 @@ const Hackathons: React.FC = () => {
                       className="border border-dashed border-[#BA2F2F]/40 dark:border-neutral-700 p-3 flex flex-col items-center justify-center text-center cursor-pointer hover:border-[#BA2F2F] dark:hover:border-neutral-400 bg-[#BA2F2F]/5 dark:bg-neutral-950/50 transition-all min-h-[95px] group"
                     >
                       <ImagePlus size={18} className="text-[#BA2F2F] dark:text-zinc-400 group-hover:scale-110 transition-transform mb-1.5" />
-                      <span className="text-[10px] font-mono uppercase tracking-[0.1em] text-[#040101]/80 dark:text-neutral-400 font-medium">
+                      <span className="text-[10px] uppercase tracking-[0.1em] text-[#040101]/80 dark:text-neutral-400 font-medium">
                         {slot.caption}
                       </span>
                       <span className="text-[9px] uppercase tracking-[0.14em] font-bold text-[#BA2F2F] dark:text-white mt-1 underline underline-offset-2">
@@ -137,11 +137,11 @@ const Hackathons: React.FC = () => {
               </p>
             </div>
             <div className="border border-dashed border-[#BA2F2F]/60 dark:border-neutral-700 w-full max-w-md h-40 flex items-center justify-center bg-[#BA2F2F]/5 dark:bg-neutral-950 cursor-pointer hover:border-[#BA2F2F] dark:hover:border-neutral-400 transition-colors">
-              <span className="text-xs font-mono uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-zinc-500 font-semibold">
+              <span className="text-xs uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-zinc-500 font-semibold">
                 Click to browse or drop file
               </span>
             </div>
-            <p className="text-[11px] font-mono text-[#040101]/60 dark:text-neutral-600">
+            <p className="text-[11px] text-[#040101]/60 dark:text-neutral-600">
               Files are saved to public/assets/events/
             </p>
           </div>

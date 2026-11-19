@@ -12,7 +12,7 @@ export default {
         heading: ['"Panchang"', 'sans-serif'],
         body: ['"Panchang"', 'sans-serif'],
         display: ['"Panchang"', 'sans-serif'],
-        mono: ['"Geist Mono"', 'monospace'],
+        mono: ['"Panchang"', 'sans-serif'],
       },
       letterSpacing: {
         'tight-title': '-0.05em',

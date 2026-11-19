@@ -243,6 +243,9 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
     };
 
     img.src = activeSrc;
+    if (img.complete && img.naturalWidth !== 0) {
+      processImage(img);
+    }
   }, [activeSrc, processImage]);
 
   // ── Animation & Hover Draw Loop ──
@@ -258,7 +261,11 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
       const baseGrid = baseGridRef.current;
       const isSub = isSubjectRef.current;
       const disp = displayGridRef.current;
-      if (baseGrid.length === 0) return;
+      if (baseGrid.length === 0) {
+        // Keep waiting for image processing to complete
+        rafRef.current = requestAnimationFrame(render);
+        return;
+      }
 
       const rows = baseGrid.length;
       const cols = baseGrid[0].length;
@@ -351,7 +358,7 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
 
     rafRef.current = requestAnimationFrame(render);
     return () => cancelAnimationFrame(rafRef.current);
-  }, [isDark]);
+  }, [isDark, loaded]);
 
   // ── Mouse Tracking Listeners ──
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -399,7 +406,7 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
         </div>
 
         {/* Interactive Controls Bar */}
-        <div className="mt-2.5 pt-2 border-t border-[#BA2F2F]/25 dark:border-neutral-900 flex flex-wrap items-center justify-between gap-3 text-[10px] font-mono text-[#040101]/70 dark:text-neutral-400">
+        <div className="mt-2.5 pt-2 border-t border-[#BA2F2F]/25 dark:border-neutral-900 flex flex-wrap items-center justify-between gap-3 text-[10px] text-[#040101]/70 dark:text-neutral-400">
           <span className="flex items-center gap-1.5 uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-emerald-400 font-semibold">
             <Zap size={11} className="text-[#BA2F2F] dark:text-amber-500" />
             HOVER TO ILLUMINATE

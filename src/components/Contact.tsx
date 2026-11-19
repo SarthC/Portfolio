@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
 
           {/* Primary Email Showcase Card */}
           <div className="border border-[#BA2F2F] dark:border-neutral-800 bg-[#FEFDFD] dark:bg-black p-8 sm:p-12 mb-8">
-            <span className="text-[10px] font-mono uppercase tracking-[0.28em] text-[#BA2F2F] dark:text-neutral-400 mb-3 block font-semibold">
+            <span className="text-[10px] uppercase tracking-[0.28em] text-[#BA2F2F] dark:text-neutral-400 mb-3 block font-semibold">
               PRIMARY COMMUNICATION CHANNEL
             </span>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                 className="border border-[#BA2F2F] dark:border-neutral-800 bg-[#FEFDFD] dark:bg-black p-5 flex items-center justify-between hover:border-[#BA2F2F] dark:hover:border-neutral-500 transition-colors group"
               >
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#BA2F2F] dark:text-neutral-500 block mb-1 font-semibold">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#BA2F2F] dark:text-neutral-500 block mb-1 font-semibold">
                     {social.platform}
                   </span>
                   <span className="text-xs font-medium text-[#040101] dark:text-white group-hover:text-[#BA2F2F] dark:group-hover:underline underline-offset-4 transition-colors">

@@ -27,11 +27,11 @@ const Experience: React.FC = () => {
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pb-6 border-b border-[#BA2F2F]/20 dark:border-neutral-800 mb-6">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xs font-mono text-[#BA2F2F] dark:text-neutral-600 font-bold">
+                    <span className="text-xs text-[#BA2F2F] dark:text-neutral-600 font-bold">
                       #{String(idx + 1).padStart(2, '0')}
                     </span>
                     {exp.badge && (
-                      <span className="border border-[#BA2F2F] dark:border-neutral-700 text-[10px] font-mono uppercase tracking-[0.18em] px-2.5 py-0.5 text-[#BA2F2F] dark:text-neutral-300 font-semibold">
+                      <span className="border border-[#BA2F2F] dark:border-neutral-700 text-[10px] uppercase tracking-[0.18em] px-2.5 py-0.5 text-[#BA2F2F] dark:text-neutral-300 font-semibold">
                         {exp.badge}
                       </span>
                     )}
@@ -44,7 +44,7 @@ const Experience: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.14em] text-[#040101] dark:text-neutral-400 self-start md:self-auto border border-[#BA2F2F]/40 dark:border-neutral-800 px-3 py-1.5 font-semibold">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.14em] text-[#040101] dark:text-neutral-400 self-start md:self-auto border border-[#BA2F2F]/40 dark:border-neutral-800 px-3 py-1.5 font-semibold">
                   <Calendar size={13} className="text-[#BA2F2F] dark:text-neutral-400" />
                   <span>{exp.period}</span>
                 </div>
@@ -72,7 +72,7 @@ const Experience: React.FC = () => {
                     <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
                     <span>{exp.metricsPlaceholder.label}</span>
                   </div>
-                  <p className="text-xs text-[#040101]/80 dark:text-neutral-400 font-mono">
+                  <p className="text-xs text-[#040101]/80 dark:text-neutral-400">
                     {exp.metricsPlaceholder.description}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ const Experience: React.FC = () => {
                       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#040101] dark:text-white">
                         {exp.certificateProof.title}
                       </p>
-                      <p className="text-[11px] font-mono text-[#040101]/70 dark:text-neutral-400">
+                      <p className="text-[11px] text-[#040101]/70 dark:text-neutral-400">
                         Official verification issued {exp.certificateProof.issueDate}
                       </p>
                     </div>

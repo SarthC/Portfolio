@@ -231,15 +231,15 @@ const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({ projec
       <div>
         {/* Top bar: Index and Category */}
         <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#BA2F2F]/20 dark:border-neutral-900">
-          <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
+          <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
             PROJECT #{String(index + 1).padStart(2, '0')}
           </span>
           <div className="flex items-center gap-2">
-            <span className="border border-[#BA2F2F] dark:border-neutral-700 text-[10px] font-mono uppercase tracking-[0.14em] px-2 py-0.5 text-[#BA2F2F] dark:text-neutral-300 font-semibold">
+            <span className="border border-[#BA2F2F] dark:border-neutral-700 text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 text-[#BA2F2F] dark:text-neutral-300 font-semibold">
               {project.category}
             </span>
             {project.featured && (
-              <span className="bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black text-[9px] font-mono uppercase tracking-[0.16em] px-2 py-0.5 font-bold">
+              <span className="bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black text-[9px] uppercase tracking-[0.16em] px-2 py-0.5 font-bold">
                 FEATURED
               </span>
             )}
@@ -311,7 +311,7 @@ const ProjectCard: React.FC<{ project: ProjectItem; index: number }> = ({ projec
         ) : null}
 
         {!project.githubUrl && !project.liveUrl && (
-          <span className="text-[11px] font-mono uppercase tracking-[0.14em] text-[#040101]/60 dark:text-neutral-600">
+          <span className="text-[11px] uppercase tracking-[0.14em] text-[#040101]/60 dark:text-neutral-600">
             Internal / Repository Pending
           </span>
         )}
@@ -330,10 +330,10 @@ const PlaceholderCard: React.FC<{ project: ProjectItem; index: number }> = ({ pr
       <div>
         {/* Top bar */}
         <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#BA2F2F]/20 dark:border-neutral-800">
-          <span className="text-[10px] font-mono text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
+          <span className="text-[10px] text-[#BA2F2F] dark:text-neutral-600 uppercase tracking-widest font-bold">
             PROJECT #{String(index + 1).padStart(2, '0')}
           </span>
-          <span className="border border-dashed border-[#BA2F2F] dark:border-neutral-700 text-[10px] font-mono uppercase tracking-[0.14em] px-2 py-0.5 text-[#BA2F2F] dark:text-neutral-400 font-semibold">
+          <span className="border border-dashed border-[#BA2F2F] dark:border-neutral-700 text-[10px] uppercase tracking-[0.14em] px-2 py-0.5 text-[#BA2F2F] dark:text-neutral-400 font-semibold">
             DRAFT / EDITABLE
           </span>
         </div>
@@ -350,14 +350,14 @@ const PlaceholderCard: React.FC<{ project: ProjectItem; index: number }> = ({ pr
         </p>
 
         <div className="border border-dashed border-[#BA2F2F]/30 dark:border-neutral-800 p-4 bg-[#FEFDFD] dark:bg-black mb-4">
-          <p className="text-xs font-mono text-[#040101]/75 dark:text-neutral-400 leading-relaxed">
+          <p className="text-xs text-[#040101]/75 dark:text-neutral-400 leading-relaxed">
             [Sarthak: Paste the exact architecture details, tech stack breakdown, benchmarks, and production GitHub repository links for GroundZero here.]
           </p>
         </div>
       </div>
 
       <div className="pt-4 border-t border-[#BA2F2F]/20 dark:border-neutral-800">
-        <span className="text-[11px] font-mono uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-neutral-600 font-semibold">
+        <span className="text-[11px] uppercase tracking-[0.14em] text-[#BA2F2F] dark:text-neutral-600 font-semibold">
           Awaiting input &bull; Ready for deployment
         </span>
       </div>

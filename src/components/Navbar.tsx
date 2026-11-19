@@ -59,23 +59,31 @@ const Navbar: React.FC = () => {
     <>
       <nav className="fixed top-0 inset-x-0 z-50 bg-[#FEFDFD]/95 dark:bg-black/95 backdrop-blur-md border-b border-[#BA2F2F] dark:border-neutral-800 transition-colors">
         <div className="section-container">
-          <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Logo in uppercase wide tracking */}
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-4">
+            {/* Anchor Brand Logo */}
             <a
               href="#"
               onClick={scrollToTop}
-              className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.3em] text-[#040101] dark:text-white hover:text-[#BA2F2F] dark:hover:text-[#BA2F2F] transition-colors group"
+              className="flex-shrink-0 flex items-center gap-2.5 sm:gap-3 transition-opacity hover:opacity-85 group mr-2 lg:mr-6"
+              aria-label="Sarthak Choudhari"
             >
               <img
-                src="/assets/logo.jpg"
-                alt="SC"
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-[#BA2F2F] dark:border-neutral-700 group-hover:border-[#BA2F2F] transition-colors"
+                src="/assets/logo-light.jpg"
+                alt="Logo"
+                className="block dark:hidden h-8 sm:h-10 w-auto object-contain flex-shrink-0"
               />
-              <span>SARTHAK CHOUDHARI</span>
+              <img
+                src="/assets/logo.jpg"
+                alt="Logo"
+                className="hidden dark:block h-8 sm:h-10 w-auto object-contain flex-shrink-0"
+              />
+              <span className="whitespace-nowrap text-[11px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-[#040101] dark:text-white group-hover:text-[#BA2F2F] transition-colors">
+                SARTHAK CHOUDHARI
+              </span>
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden xl:flex items-center gap-7">
+            <div className="hidden xl:flex items-center gap-3.5 2xl:gap-6 flex-shrink-0">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace('#', '');
                 const isActive = activeSection === sectionId;
@@ -83,7 +91,7 @@ const Navbar: React.FC = () => {
                   <a
                     key={link.href}
                     href={link.href}
-                    className={`text-xs uppercase tracking-[0.2em] font-medium transition-colors ${
+                    className={`whitespace-nowrap text-[10px] 2xl:text-xs uppercase tracking-[0.12em] 2xl:tracking-[0.18em] font-medium transition-colors ${
                       isActive
                         ? 'text-[#BA2F2F] dark:text-white font-semibold underline underline-offset-8 decoration-2 decoration-[#BA2F2F] dark:decoration-white'
                         : 'text-[#040101]/70 hover:text-[#BA2F2F] dark:text-neutral-400 dark:hover:text-white'
@@ -96,7 +104,7 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Controls */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-shrink-0">
               {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
