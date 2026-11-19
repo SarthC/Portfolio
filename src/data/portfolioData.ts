@@ -64,7 +64,7 @@ export interface SkillCategory {
 // ─── Personal Info ───────────────────────────────────────────────
 
 export const personalInfo = {
-  fullName: 'Sarthak Laxman Choudhari',
+  fullName: 'Sarthak Choudhari',
   tagline: 'Full-Stack Developer | AI & Machine Learning Enthusiast | Computer Science Engineering Student',
   statusPill: 'Actively Competing in Hackathons • Minor in Quantum Computing',
   bio: `I am currently in my third year pursuing a B.Tech in Computer Science and Engineering (Core CS + AI Engineering), alongside a minor in Quantum Computing at MIT Art, Design and Technology University, Pune. I specialize in building AI-driven solutions and full-stack web applications. I am a highly active hackathon participant with a strong focus on solving real-world problems through technology.`,

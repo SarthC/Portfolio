@@ -64,9 +64,14 @@ const Navbar: React.FC = () => {
             <a
               href="#"
               onClick={scrollToTop}
-              className="text-xs font-semibold uppercase tracking-[0.36em] text-[#040101] dark:text-white hover:text-[#BA2F2F] dark:hover:text-[#BA2F2F] transition-colors"
+              className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.3em] text-[#040101] dark:text-white hover:text-[#BA2F2F] dark:hover:text-[#BA2F2F] transition-colors group"
             >
-              SARTHAK CHOUDHARI
+              <img
+                src="/assets/logo.jpg"
+                alt="SC"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-[#BA2F2F] dark:border-neutral-700 group-hover:border-[#BA2F2F] transition-colors"
+              />
+              <span>SARTHAK CHOUDHARI</span>
             </a>
 
             {/* Desktop Navigation */}

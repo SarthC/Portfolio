@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           {/* Identity & Copyright */}
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.36em] text-[#040101] dark:text-white block mb-2">
-              SARTHAK LAXMAN CHOUDHARI
+              SARTHAK CHOUDHARI
             </span>
             <p className="text-xs font-mono text-[#040101]/60 dark:text-neutral-500">
               MIT ADT University &bull; B.Tech CSE (AI Engineering) &bull; &copy; {new Date().getFullYear()}

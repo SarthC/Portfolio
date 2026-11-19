@@ -1,15 +1,38 @@
+@import './fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    font-family: 'Panchang', sans-serif;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp,
+  .font-mono,
+  .font-mono * {
+    font-family: 'Geist Mono', monospace !important;
+  }
+
   html {
     scroll-behavior: smooth;
+    font-family: 'Panchang', sans-serif;
   }
 
   body {
-    @apply bg-[#FEFDFD] text-[#040101] dark:bg-black dark:text-white font-sans antialiased;
+    @apply bg-[#FEFDFD] text-[#040101] dark:bg-black dark:text-white antialiased;
+    font-family: 'Panchang', sans-serif;
     transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  button, input, optgroup, select, textarea {
+    font-family: 'Panchang', sans-serif;
   }
 
   ::selection {

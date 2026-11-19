@@ -8,10 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Geist', 'system-ui', 'sans-serif'],
-        heading: ['Geist', 'system-ui', 'sans-serif'],
-        body: ['Geist', 'system-ui', 'sans-serif'],
-        display: ['Geist', 'system-ui', 'sans-serif'],
+        sans: ['"Panchang"', 'sans-serif'],
+        heading: ['"Panchang"', 'sans-serif'],
+        body: ['"Panchang"', 'sans-serif'],
+        display: ['"Panchang"', 'sans-serif'],
         mono: ['"Geist Mono"', 'monospace'],
       },
       letterSpacing: {

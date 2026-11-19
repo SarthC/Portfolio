@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             <div className="lg:col-span-5 xl:col-span-6 text-left flex flex-col justify-between">
               <div>
                 <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[-0.05em] leading-[0.95] text-[#040101] dark:text-white mb-6">
-                  Sarthak Laxman Choudhari
+                  Sarthak Choudhari
                 </h1>
 
                 <p className="text-base sm:text-lg text-[#040101]/80 dark:text-neutral-400 font-normal leading-relaxed mb-6">
@@ -83,25 +83,6 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Quick Stats in Minimalist Museum Grid with Red/Dark borders */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#BA2F2F] dark:bg-neutral-800 border border-[#BA2F2F] dark:border-neutral-800 mb-12">
-            {[
-              { value: '4+', label: 'INTERNSHIPS' },
-              { value: '8+', label: 'HACKATHONS' },
-              { value: '8+', label: 'CERTIFICATIONS' },
-              { value: '8.52', label: 'CURRENT CGPA' },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-[#FEFDFD] dark:bg-black p-6 text-left">
-                <span className="block text-[10px] uppercase tracking-[0.24em] text-[#BA2F2F] dark:text-neutral-400 mb-2 font-semibold">
-                  {stat.label}
-                </span>
-                <span className="font-heading text-3xl sm:text-4xl font-semibold tracking-[-0.04em] text-[#040101] dark:text-white">
-                  {stat.value}
-                </span>
-              </div>
-            ))}
           </div>
 
           {/* Academic Timeline Cards in Crisp Borders */}
