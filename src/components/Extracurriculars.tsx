@@ -25,7 +25,7 @@ const trainingSports = [
 const clubs = [
   {
     name: 'GeeksforGeeks MIT ADT Chapter',
-    year: '2025',
+    year: '2025 – 2026',
     role: 'Technical Team Member',
     highlights: [
       'Engineered and launched the official student portal serving 500+ active users',
@@ -34,7 +34,7 @@ const clubs = [
   },
   {
     name: 'QQuest Technical Club',
-    year: '2025 – Present',
+    year: '2026 – Present',
     role: 'Active Technical Member',
     highlights: [
       'Contributing to quantum computing algorithms, Qiskit circuits, and technical seminars',

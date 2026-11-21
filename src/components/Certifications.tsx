@@ -38,10 +38,7 @@ const Certifications: React.FC = () => {
         {/* Section Header */}
         <div className="mb-14">
           <span className="section-eyebrow">INDEX 05 / CREDENTIALS</span>
-          <h2 className="section-title mb-4">Certifications Vault</h2>
-          <p className="section-subtitle">
-            Industry accreditations from IBM, Google, Cisco, and Johns Hopkins University across machine learning, networking, and software engineering.
-          </p>
+          <h2 className="section-title">Certifications Vault</h2>
         </div>
 
         {/* Filter Tabs */}
