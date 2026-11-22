@@ -121,26 +121,6 @@ const Contact: React.FC = () => {
               <span>Download Resume</span>
             </a>
           </div>
-
-          {/* Resume Download Banner */}
-          <div className="mt-8 border border-dashed border-[#BA2F2F]/60 dark:border-neutral-700 bg-[#BA2F2F]/5 dark:bg-neutral-950 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <span className="text-[10px] uppercase tracking-[0.24em] text-[#BA2F2F] dark:text-neutral-400 font-semibold block mb-1">
-                OFFICIAL CURRICULUM VITAE
-              </span>
-              <p className="text-sm font-semibold text-[#040101] dark:text-white">
-                Download comprehensive resume &amp; academic credentials
-              </p>
-            </div>
-            <a
-              href="/Sarthak-Choudhari-Resume.pdf"
-              download="Sarthak-Choudhari-Resume.pdf"
-              className="btn-primary flex items-center gap-2 self-start sm:self-auto group"
-            >
-              <Download size={14} className="group-hover:translate-y-0.5 transition-transform" />
-              <span>Download Resume</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>
