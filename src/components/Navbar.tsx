@@ -91,11 +91,10 @@ const Navbar: React.FC = () => {
                   <a
                     key={link.href}
                     href={link.href}
-                    className={`whitespace-nowrap text-[10px] 2xl:text-xs uppercase tracking-[0.12em] 2xl:tracking-[0.18em] font-medium transition-colors ${
-                      isActive
+                    className={`whitespace-nowrap text-[10px] 2xl:text-xs uppercase tracking-[0.12em] 2xl:tracking-[0.18em] font-medium transition-colors ${isActive
                         ? 'text-[#BA2F2F] dark:text-white font-semibold underline underline-offset-8 decoration-2 decoration-[#BA2F2F] dark:decoration-white'
                         : 'text-[#040101]/70 hover:text-[#BA2F2F] dark:text-neutral-400 dark:hover:text-white'
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </a>
@@ -144,11 +143,10 @@ const Navbar: React.FC = () => {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`text-sm uppercase tracking-[0.28em] py-2 border-b border-[#BA2F2F]/20 dark:border-neutral-900 ${
-                      isActive
+                    className={`text-sm uppercase tracking-[0.28em] py-2 border-b border-[#BA2F2F]/20 dark:border-neutral-900 ${isActive
                         ? 'text-[#BA2F2F] dark:text-white font-semibold'
                         : 'text-[#040101]/70 dark:text-neutral-400'
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </a>

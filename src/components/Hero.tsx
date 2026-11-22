@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Mail, GraduationCap, Calendar, Award } from 'lucide-react';
+import { ExternalLink, Github, Mail, GraduationCap, Calendar, Award, Download } from 'lucide-react';
 import BinaryPortrait from './BinaryPortrait';
 
 const Hero: React.FC = () => {
@@ -16,9 +16,18 @@ const Hero: React.FC = () => {
 
           {/* Main Hero Header: Wider Binary Portrait on Left, Name & Bio on Right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start mb-16">
-            {/* Left Column: High-Resolution Wider Binary Portrait */}
-            <div className="lg:col-span-7 xl:col-span-6 w-full">
+            {/* Left Column: High-Resolution Wider Binary Portrait & Resume Download */}
+            <div className="lg:col-span-7 xl:col-span-6 w-full flex flex-col items-start gap-4">
               <BinaryPortrait src="/assets/portrait.png" />
+              <a
+                href="/Sarthak-Choudhari-Resume.pdf"
+                download="Sarthak-Choudhari-Resume.pdf"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-full border border-[#BA2F2F] bg-[#BA2F2F] text-[#FEFDFD] hover:bg-transparent hover:text-[#BA2F2F] dark:border-white dark:bg-white dark:text-black dark:hover:bg-transparent dark:hover:text-white text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-200 group shadow-sm hover:shadow-md"
+                title="Download Sarthak Choudhari's Resume"
+              >
+                <Download size={14} className="group-hover:translate-y-0.5 transition-transform" />
+                <span>Download Resume</span>
+              </a>
             </div>
 
             {/* Right Column: Name, Tagline, Bio, Quick Actions */}

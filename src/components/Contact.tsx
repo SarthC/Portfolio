@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, ExternalLink, Github, Copy, Check } from 'lucide-react';
+import { Mail, ExternalLink, Github, Copy, Check, Download } from 'lucide-react';
 
 const EMAIL = 'sarthakc8493@gmail.com';
 
@@ -71,9 +71,9 @@ const Contact: React.FC = () => {
               </a>
               <button
                 onClick={handleCopyEmail}
-                className="inline-flex items-center gap-2 border border-[#BA2F2F] dark:border-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.16em] text-[#BA2F2F] dark:text-white hover:bg-[#BA2F2F] hover:text-[#FEFDFD] dark:hover:bg-white dark:hover:text-black transition-all self-start sm:self-auto"
+                className="inline-flex items-center gap-2 border border-[#BA2F2F] dark:border-white px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.16em] text-[#BA2F2F] dark:text-white hover:bg-[#BA2F2F] hover:text-[#FEFDFD] dark:hover:bg-white dark:hover:text-black transition-all self-start sm:self-auto"
               >
-                {copied ? <Check size={14} /> : <Copy size={14} />}
+                {copied ? <Check size={12} /> : <Copy size={12} />}
                 {copied ? 'Copied to Clipboard' : 'Copy Address'}
               </button>
             </div>
@@ -100,6 +100,46 @@ const Contact: React.FC = () => {
                 <social.icon size={16} className="text-[#BA2F2F] dark:text-zinc-400 group-hover:scale-110 transition-transform flex-shrink-0 ml-3" />
               </a>
             ))}
+          </div>
+
+          {/* Resume Download Banner */}
+          <div className="mt-8 border border-dashed border-[#BA2F2F]/60 dark:border-neutral-700 bg-[#BA2F2F]/5 dark:bg-neutral-950 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.24em] text-[#BA2F2F] dark:text-neutral-400 font-semibold block mb-1">
+                OFFICIAL CURRICULUM VITAE
+              </span>
+              <p className="text-sm font-semibold text-[#040101] dark:text-white">
+                Download comprehensive resume &amp; academic credentials
+              </p>
+            </div>
+            <a
+              href="/Sarthak-Choudhari-Resume.pdf"
+              download="Sarthak-Choudhari-Resume.pdf"
+              className="btn-primary flex items-center gap-2 self-start sm:self-auto group"
+            >
+              <Download size={14} className="group-hover:translate-y-0.5 transition-transform" />
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          {/* Resume Download Banner */}
+          <div className="mt-8 border border-dashed border-[#BA2F2F]/60 dark:border-neutral-700 bg-[#BA2F2F]/5 dark:bg-neutral-950 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.24em] text-[#BA2F2F] dark:text-neutral-400 font-semibold block mb-1">
+                OFFICIAL CURRICULUM VITAE
+              </span>
+              <p className="text-sm font-semibold text-[#040101] dark:text-white">
+                Download comprehensive resume &amp; academic credentials
+              </p>
+            </div>
+            <a
+              href="/Sarthak-Choudhari-Resume.pdf"
+              download="Sarthak-Choudhari-Resume.pdf"
+              className="btn-primary flex items-center gap-2 self-start sm:self-auto group"
+            >
+              <Download size={14} className="group-hover:translate-y-0.5 transition-transform" />
+              <span>Download Resume</span>
+            </a>
           </div>
         </div>
       </div>
