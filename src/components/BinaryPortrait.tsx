@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Upload, Eye, Zap } from 'lucide-react';
+import { Eye, Zap } from 'lucide-react';
 
 // ---------------------------------------------------------------------------
 // High-Resolution Configuration (Wider footprint & high detail)
@@ -23,7 +23,6 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
   const isDark = theme === 'dark';
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Core matrices
   const baseGridRef = useRef<number[][]>([]);
@@ -377,20 +376,6 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
     mouseRef.current = null;
   }, []);
 
-  // ── Upload Custom Image ──
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      if (result) {
-        setActiveSrc(result);
-      }
-    };
-    reader.readAsDataURL(file);
-  };
-
   return (
     <div className={`relative group w-full ${className}`}>
       {/* High-Definition Museum Gallery Container with Red/Dark borders */}
@@ -421,26 +406,8 @@ const BinaryPortrait: React.FC<BinaryPortraitProps> = ({
               <Eye size={11} />
               {invertSubject ? 'NORMAL' : 'INVERT'}
             </button>
-
-            <button
-              onClick={() => fileInputRef.current?.click()}
-              className="inline-flex items-center gap-1 hover:text-[#BA2F2F] dark:hover:text-white uppercase tracking-[0.14em] transition-colors"
-              title="Upload new image"
-            >
-              <Upload size={11} />
-              CHANGE PHOTO
-            </button>
           </div>
         </div>
-
-        {/* Hidden File Input */}
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="image/*"
-          className="hidden"
-          onChange={handleFileUpload}
-        />
       </div>
     </div>
   );

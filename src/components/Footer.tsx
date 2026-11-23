@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
               SARTHAK CHOUDHARI
             </span>
             <p className="text-xs text-[#040101]/60 dark:text-neutral-500">
-              MIT ADT University &bull; B.Tech CSE (AI Engineering) &bull; &copy; {new Date().getFullYear()}
+              MIT ADT University &bull; B.Tech CSE (Minor in Quantum Computing) &bull; &copy; {new Date().getFullYear()}
             </p>
           </div>
 
