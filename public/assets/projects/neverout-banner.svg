@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="100%" stop-color="#141414" />
+    </linearGradient>
+    <linearGradient id="greenPulse" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25D366" />
+      <stop offset="100%" stop-color="#128C7E" />
+    </linearGradient>
+    <linearGradient id="accentRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA2F2F" />
+      <stop offset="100%" stop-color="#801818" />
+    </linearGradient>
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#222" stroke-width="0.8" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bgGrad)" />
+  <rect width="800" height="400" fill="url(#gridPattern)" opacity="0.6" />
+
+  <!-- Top Decorative Bar -->
+  <rect x="0" y="0" width="800" height="6" fill="#BA2F2F" />
+
+  <!-- Title Badge -->
+  <g transform="translate(40, 45)">
+    <rect x="0" y="0" width="130" height="26" fill="#BA2F2F" rx="2" />
+    <text x="65" y="17" fill="#ffffff" font-family="'Courier New', monospace" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="2">NEVEROUT</text>
+    
+    <text x="145" y="18" fill="#888" font-family="'Courier New', monospace" font-size="12" letter-spacing="1">KIRANA INVENTORY &amp; DEMAND AI</text>
+  </g>
+
+  <!-- Central Visual: Dashboard Mockup -->
+  <!-- Left Box: Inventory & Barcode Stream -->
+  <g transform="translate(40, 95)">
+    <rect width="330" height="255" fill="#111111" stroke="#333333" stroke-width="1.5" rx="4" />
+    
+    <!-- Header -->
+    <rect width="330" height="34" fill="#1a1a1a" rx="4 4 0 0" />
+    <circle cx="18" cy="17" r="4" fill="#BA2F2F" />
+    <circle cx="32" cy="17" r="4" fill="#eab308" />
+    <circle cx="46" cy="17" r="4" fill="#25D366" />
+    <text x="65" y="21" fill="#bbb" font-family="sans-serif" font-size="11" font-weight="600">Camera Barcode Scanner</text>
+    <rect x="250" y="8" width="70" height="18" fill="#222" stroke="#444" rx="2" />
+    <text x="285" y="21" fill="#25D366" font-family="'Courier New', monospace" font-size="9" text-anchor="middle">ACTIVE</text>
+
+    <!-- Barcode Viewfinder -->
+    <rect x="20" y="50" width="290" height="85" fill="#050505" stroke="#BA2F2F" stroke-width="1" stroke-dasharray="4,4" rx="2" />
+    <!-- Barcode Lines -->
+    <g transform="translate(55, 65)" fill="#ffffff">
+      <rect x="0" width="3" height="40" />
+      <rect x="6" width="6" height="40" />
+      <rect x="16" width="2" height="40" />
+      <rect x="22" width="8" height="40" />
+      <rect x="34" width="4" height="40" />
+      <rect x="42" width="2" height="40" />
+      <rect x="48" width="7" height="40" />
+      <rect x="60" width="3" height="40" />
+      <rect x="67" width="9" height="40" />
+      <rect x="80" width="2" height="40" />
+      <rect x="86" width="5" height="40" />
+      <rect x="95" width="8" height="40" />
+      <rect x="107" width="3" height="40" />
+      <rect x="114" width="7" height="40" />
+      <rect x="125" width="2" height="40" />
+      <rect x="131" width="6" height="40" />
+      <rect x="141" width="4" height="40" />
+      <rect x="149" width="8" height="40" />
+      <rect x="161" width="2" height="40" />
+      <rect x="167" width="5" height="40" />
+      <rect x="176" width="9" height="40" />
+      <rect x="189" width="3" height="40" />
+      <rect x="196" width="6" height="40" />
+    </g>
+    <!-- Laser Scan Line -->
+    <line x1="30" y1="85" x2="300" y2="85" stroke="#BA2F2F" stroke-width="2" />
+    <text x="165" y="125" fill="#aaa" font-family="'Courier New', monospace" font-size="10" text-anchor="middle">Open Food Facts API: 8901030381014</text>
+
+    <!-- Detected Item Card -->
+    <rect x="20" y="148" width="290" height="92" fill="#181818" stroke="#282828" rx="2" />
+    <text x="32" y="168" fill="#fff" font-family="sans-serif" font-size="12" font-weight="bold">Tata Tea Premium (500g)</text>
+    <text x="32" y="186" fill="#888" font-family="sans-serif" font-size="10">Current Stock: 3 units &bull; Min Threshold: 10 units</text>
+    
+    <!-- Status Badge -->
+    <rect x="32" y="198" width="110" height="22" fill="#BA2F2F" rx="2" />
+    <text x="87" y="213" fill="#fff" font-family="'Courier New', monospace" font-size="10" font-weight="bold" text-anchor="middle">CRITICAL LOW</text>
+
+    <rect x="150" y="198" width="145" height="22" fill="#25D366" rx="2" />
+    <text x="222" y="213" fill="#fff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">WHATSAPP TRIGGERED</text>
+  </g>
+
+  <!-- Right Box: Demand Forecasting & WhatsApp Dispatch -->
+  <g transform="translate(395, 95)">
+    <rect width="365" height="255" fill="#111111" stroke="#333333" stroke-width="1.5" rx="4" />
+    
+    <!-- Header -->
+    <rect width="365" height="34" fill="#1a1a1a" rx="4 4 0 0" />
+    <text x="18" y="21" fill="#bbb" font-family="sans-serif" font-size="11" font-weight="600">Scikit-Learn Demand Forecasting</text>
+    <rect x="275" y="8" width="75" height="18" fill="#1e293b" stroke="#3b82f6" rx="2" />
+    <text x="312" y="21" fill="#60a5fa" font-family="'Courier New', monospace" font-size="9" text-anchor="middle">12M REGRESSION</text>
+
+    <!-- Forecast Graph -->
+    <g transform="translate(20, 50)">
+      <rect width="325" height="100" fill="#080808" stroke="#222" rx="2" />
+      <!-- Grid lines -->
+      <line x1="0" y1="25" x2="325" y2="25" stroke="#1c1c1c" />
+      <line x1="0" y1="50" x2="325" y2="50" stroke="#1c1c1c" />
+      <line x1="0" y1="75" x2="325" y2="75" stroke="#1c1c1c" />
+      
+      <!-- Trend Area & Line -->
+      <path d="M 15 75 Q 60 70 100 55 T 180 30 T 260 45 T 310 20" fill="none" stroke="#BA2F2F" stroke-width="2.5" />
+      <!-- Dotted Prediction Projection -->
+      <path d="M 260 45 L 310 20" stroke="#60a5fa" stroke-width="2.5" stroke-dasharray="4,4" fill="none" />
+      
+      <!-- Data points -->
+      <circle cx="15" cy="75" r="3.5" fill="#BA2F2F" />
+      <circle cx="60" cy="70" r="3.5" fill="#BA2F2F" />
+      <circle cx="100" cy="55" r="3.5" fill="#BA2F2F" />
+      <circle cx="140" cy="40" r="3.5" fill="#BA2F2F" />
+      <circle cx="180" cy="30" r="3.5" fill="#BA2F2F" />
+      <circle cx="220" cy="38" r="3.5" fill="#BA2F2F" />
+      <circle cx="260" cy="45" r="3.5" fill="#60a5fa" />
+      <circle cx="310" cy="20" r="4.5" fill="#25D366" />
+      
+      <!-- High Surge Tag -->
+      <rect x="225" y="8" width="90" height="16" fill="#25D366" rx="2" />
+      <text x="270" y="19" fill="#000" font-family="'Courier New', monospace" font-size="8" font-weight="bold" text-anchor="middle">FESTIVAL SURGE +38%</text>
+    </g>
+
+    <!-- Simulated WhatsApp Alert Notification -->
+    <g transform="translate(20, 160)">
+      <rect width="325" height="80" fill="#0d2417" stroke="#128C7E" stroke-width="1.2" rx="4" />
+      <!-- WhatsApp Brand Indicator -->
+      <rect x="10" y="10" width="22" height="22" fill="#25D366" rx="11" />
+      <text x="21" y="25" fill="#fff" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">W</text>
+      
+      <text x="40" y="22" fill="#25D366" font-family="sans-serif" font-size="11" font-weight="bold">Twilio WhatsApp Restock Notification</text>
+      <text x="40" y="38" fill="#e2e8f0" font-family="'Courier New', monospace" font-size="10">[URGENT] Kirana Store #04</text>
+      <text x="40" y="54" fill="#cbd5e1" font-family="sans-serif" font-size="10">Tata Tea is at 3 units (Below safety threshold of 10).</text>
+      <text x="40" y="68" fill="#94a3b8" font-family="sans-serif" font-size="9">Recommended Restock: 25 units (Projected Surge)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tech Ribbon -->
+  <g transform="translate(40, 368)">
+    <text x="0" y="16" fill="#666" font-family="'Courier New', monospace" font-size="11" letter-spacing="1">STACK: REACT 19 &bull; FLASK &bull; MONGODB ATLAS &bull; CLERK JWT &bull; SCIKIT-LEARN &bull; TWILIO API &bull; WEBGL</text>
+  </g>
+</svg>

@@ -228,18 +228,153 @@ const projects: ProjectItem[] = [
   },
   {
     id: 'neverout',
-    title: 'Never Out',
-    tagline: 'Multi-tenant SaaS inventory platform for Kirana shops',
+    title: 'NeverOut',
+    tagline: 'AI-Powered Multi-Tenant Kirana Inventory with Automated WhatsApp Restocking & Seasonal ML Forecasting',
     category: 'Full-Stack',
-    techStack: ['React', 'Flask', 'MongoDB', 'Scikit-Learn', 'Twilio', 'Clerk'],
+    role: 'Full-Stack & ML Engineer',
+    timeline: '2026',
+    featured: true,
+    heroImage: '/assets/projects/neverout/neverout-home-hero.png',
+    techStack: [
+      'React 19',
+      'Python',
+      'Flask',
+      'MongoDB Atlas',
+      'Scikit-Learn',
+      'Twilio API',
+      'Clerk Auth',
+      'html5-qrcode',
+      'WebGL (ogl)',
+      'Pandas',
+    ],
     impactMetrics: [
-      '15% procurement budget optimization via Scikit-Learn demand forecasting',
-      'Automated WhatsApp restocking alerts dispatched through Twilio API',
-      'Custom JWT middleware securing multi-tenant backend with Clerk auth',
+      'Zero-click WhatsApp restocking alerts dispatched via Twilio Messaging API on critical thresholds',
+      '15% procurement budget optimization using Scikit-Learn seasonal regression & moving averages',
+      'Hardware-free camera barcode scanner querying Open Food Facts REST API for instant product resolution',
+      'Multi-tenant architecture with Clerk RSA JWT verification & isolated MongoDB Atlas stores',
     ],
     description:
-      'Developed a full-stack multi-tenant SaaS inventory platform tailored for local retail grocery shops with automated alerts.',
-    featured: true,
+      'An AI-powered, multi-tenant inventory management platform tailored for local Kirana (mom-and-pop) stores, featuring automated zero-click WhatsApp restocking alerts, camera barcode scanning with Open Food Facts integration, and seasonal ML demand forecasting.',
+    detailedOverview:
+      'In India and emerging markets, local Kirana shopkeepers frequently face revenue losses due to stockouts, manual ledger miscalculations, and unexpected seasonal demand spikes. NeverOut bridges modern cloud intelligence and grassroots retail: it continuously monitors inventory against dynamic safety thresholds, automatically triggers zero-friction WhatsApp alerts via Twilio directly to shopkeepers and suppliers, leverages Scikit-Learn to identify seasonal consumption trends (e.g., festival surges for sugar/oil, winter tea demand), and provides a hardware-free camera barcode scanner querying Open Food Facts for instant grocery entry.',
+    problemVsSolution: {
+      problem:
+        'Local Kirana retail stores rely primarily on manual ledgers and memory to manage inventory, leading to frequent stockouts, lost sales during festival spikes, and tedious manual restocking routines.',
+      solution:
+        'A lightweight, mobile-first inventory assistant that integrates with tools shopkeepers already use daily (WhatsApp), automates intake with camera barcode scanning, and predicts restocking needs through seasonal machine learning algorithms.',
+    },
+    keyFeatures: [
+      {
+        title: 'Intelligent WhatsApp Restocking Alerts (Zero-Click)',
+        description:
+          'Continuously checks inventory levels against custom minimum-threshold safety margins. Instantly pushes formatted restocking warnings and emergency out-of-stock messages straight to the shopkeeper\'s or supplier\'s WhatsApp via the Twilio Messaging API.',
+      },
+      {
+        title: 'Predictive Seasonal Demand Engine (ML & Analytics)',
+        description:
+          'Utilizes Scikit-Learn linear regression and time-series moving averages across 12-month sales histories. Dynamically classifies items into High / Normal / Low Demand tiers and highlights seasonal peaks and off-peak months to prevent under-ordering.',
+      },
+      {
+        title: 'In-Browser Barcode & QR Scanner',
+        description:
+          'Real-time video stream scanning via html5-qrcode directly from mobile or desktop cameras. Automatically queries the Open Food Facts REST API to resolve product titles and metadata, enabling instant item registration without manual typing.',
+      },
+      {
+        title: 'Multi-Tenant Security & Tenant Isolation',
+        description:
+          'Protected by Clerk authentication with RSA public-key JWT verification in Flask. Each merchant operates within an isolated MongoDB Atlas workspace, automatically seeded with demo catalog data and 12-month sales histories upon signup.',
+      },
+      {
+        title: 'Glassmorphic Modern UI & WebGL Visuals',
+        description:
+          'High-performance dark-mode interface built with React 19, custom glassmorphism styling, WebGL ribbon shaders (ogl), interactive particle network backgrounds, and reactive dashboard inventory counters.',
+      },
+    ],
+    engineeringChallenges: [
+      {
+        title: 'Zero-Click Notification Reliability & Rate Management',
+        description:
+          'Engineered an event-driven alert pipeline in Flask using Twilio to guarantee instant WhatsApp delivery on stock depletion while debouncing duplicate triggers during bulk transaction updates.',
+      },
+      {
+        title: 'Hardware-Free Inventory Ingestion via Web APIs',
+        description:
+          'Overcame the need for expensive physical handheld barcode readers by implementing html5-qrcode video streams and resilient asynchronous fallbacks against the Open Food Facts API.',
+      },
+      {
+        title: 'Multi-Tenant Cryptographic Auth & Auto-Seeding',
+        description:
+          'Configured PyJWT with Clerk public RSA keys to securely authorize cross-origin API requests, pairing user tenant IDs with segregated MongoDB collections and automatic first-run inventory generation.',
+      },
+    ],
+    techStackLayers: [
+      {
+        layer: 'Frontend & UI',
+        technologies: ['React 19', 'Vite', 'React Router', 'HTML5/CSS3', 'Glassmorphism Design System'],
+      },
+      {
+        layer: 'Visuals & Scanning',
+        technologies: ['ogl (WebGL Ribbon Shaders)', 'HTML5 Canvas Particles', 'html5-qrcode'],
+      },
+      {
+        layer: 'Authentication & Security',
+        technologies: ['Clerk Auth', 'JWT RSA Cryptography', 'PyJWT', 'CORS Middleware'],
+      },
+      {
+        layer: 'Backend & APIs',
+        technologies: ['Python', 'Flask', 'Flask-CORS', 'Gunicorn', 'RESTful API'],
+      },
+      {
+        layer: 'Machine Learning & Data',
+        technologies: ['Scikit-Learn', 'Pandas', 'NumPy', 'Time-Series Regression'],
+      },
+      {
+        layer: 'Database & Storage',
+        technologies: ['MongoDB Atlas', 'PyMongo', 'Isolated Tenant Collections'],
+      },
+      {
+        layer: 'External Integrations',
+        technologies: ['Twilio WhatsApp API', 'Open Food Facts REST API'],
+      },
+      {
+        layer: 'Deployment & DevOps',
+        technologies: ['Render (Split Architecture: Static UI + Python Web Service)'],
+      },
+    ],
+    screenshots: [
+      {
+        src: '/assets/projects/neverout/neverout-demand-insights.png',
+        caption: 'ML Demand Insights Dashboard — Scikit-Learn seasonal predictions, peak/off-peak classification (Toor Dal, Basmati Rice, Sugar), and trend analytics',
+        tag: 'Demand ML',
+      },
+      {
+        src: '/assets/projects/neverout/neverout-home-hero.png',
+        caption: 'NeverOut Portal Hero — Smart inventory tracking for Kirana shopkeepers with WebGL particle network background',
+        tag: 'Home Dashboard',
+      },
+      {
+        src: '/assets/projects/neverout/neverout-inventory-management.png',
+        caption: 'Live Inventory Table — Real-time stock levels, low-stock threshold monitoring, quick Sell actions, and Barcode scanner integration',
+        tag: 'Inventory Hub',
+      },
+      {
+        src: '/assets/projects/neverout/neverout-add-product-modal.png',
+        caption: 'Fast SKU Intake Modal — Seamless product registration with custom low-stock thresholds, category mapping, and pricing',
+        tag: 'Product Intake',
+      },
+      {
+        src: '/assets/projects/neverout/neverout-low-stock-alerts.png',
+        caption: 'Low Stock Alert Monitoring — Threshold tracking preventing stockouts with zero-friction alert system',
+        tag: 'Alert System',
+      },
+      {
+        src: '/assets/projects/neverout-banner.svg',
+        caption: 'NeverOut System Architecture — Camera Barcode Scanner, Twilio WhatsApp Alert Pipeline & Scikit-Learn Demand Forecasting Engine',
+        tag: 'Architecture',
+      },
+    ],
+    githubUrl: 'https://github.com/SarthC/NeverOut',
+    liveUrl: 'https://neverout-app.onrender.com/',
   },
   {
     id: 'netsage',
@@ -369,8 +504,8 @@ const Projects: React.FC = () => {
               key={tab}
               onClick={() => setActiveFilter(tab)}
               className={`px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] rounded-full transition-all ${activeFilter === tab
-                  ? 'bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black border border-[#BA2F2F] dark:border-white'
-                  : 'bg-transparent text-[#040101]/80 dark:text-neutral-400 border border-[#BA2F2F]/35 dark:border-neutral-800 hover:border-[#BA2F2F] hover:text-[#BA2F2F] dark:hover:border-neutral-400'
+                ? 'bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black border border-[#BA2F2F] dark:border-white'
+                : 'bg-transparent text-[#040101]/80 dark:text-neutral-400 border border-[#BA2F2F]/35 dark:border-neutral-800 hover:border-[#BA2F2F] hover:text-[#BA2F2F] dark:hover:border-neutral-400'
                 }`}
             >
               {tab}
@@ -526,6 +661,18 @@ const ProjectCard: React.FC<{
             >
               <Github size={12} />
               GitHub
+            </a>
+          ) : null}
+
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 border border-[#BA2F2F] dark:border-neutral-700 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#040101] dark:text-white hover:bg-[#BA2F2F] hover:text-[#FEFDFD] dark:hover:bg-white dark:hover:text-black transition-all"
+            >
+              <ExternalLink size={12} />
+              Live Demo
             </a>
           ) : null}
           {!project.githubUrl && !project.liveUrl && !hasExtendedCaseStudy && (
@@ -693,8 +840,8 @@ const CaseStudyModal: React.FC<{
                     key={idx}
                     onClick={() => setActiveSlide(idx)}
                     className={`relative flex-shrink-0 w-20 sm:w-24 aspect-video border transition-all overflow-hidden ${activeSlide === idx
-                        ? 'border-2 border-[#BA2F2F] ring-1 ring-[#BA2F2F]'
-                        : 'border-neutral-300 dark:border-neutral-800 opacity-60 hover:opacity-100'
+                      ? 'border-2 border-[#BA2F2F] ring-1 ring-[#BA2F2F]'
+                      : 'border-neutral-300 dark:border-neutral-800 opacity-60 hover:opacity-100'
                       }`}
                   >
                     <img src={s.src} alt={s.tag} className="w-full h-full object-cover" />
