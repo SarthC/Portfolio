@@ -47,11 +47,10 @@ const Certifications: React.FC = () => {
             <button
               key={tab.label}
               onClick={() => setActiveFilter(tab.label)}
-              className={`px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] rounded-full transition-all ${
-                activeFilter === tab.label
-                  ? 'bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black border border-[#BA2F2F] dark:border-white'
-                  : 'bg-transparent text-[#040101]/80 dark:text-neutral-400 border border-[#BA2F2F]/35 dark:border-neutral-800 hover:border-[#BA2F2F] hover:text-[#BA2F2F] dark:hover:border-neutral-400'
-              }`}
+              className={`px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] rounded-full transition-all ${activeFilter === tab.label
+                ? 'bg-[#BA2F2F] text-[#FEFDFD] dark:bg-white dark:text-black border border-[#BA2F2F] dark:border-white'
+                : 'bg-transparent text-[#040101]/80 dark:text-neutral-400 border border-[#BA2F2F]/35 dark:border-neutral-800 hover:border-[#BA2F2F] hover:text-[#BA2F2F] dark:hover:border-neutral-400'
+                }`}
             >
               {tab.label} ({tab.count})
             </button>
@@ -109,19 +108,6 @@ const Certifications: React.FC = () => {
               </button>
             </div>
           ))}
-
-          {/* More Certifications Coming Soon Card */}
-          <div className="border border-dashed border-[#BA2F2F]/50 dark:border-neutral-700 p-6 flex flex-col items-center justify-center text-center bg-[#BA2F2F]/5 dark:bg-neutral-950/50 min-h-[260px]">
-            <div className="w-10 h-10 border border-[#BA2F2F] dark:border-neutral-700 flex items-center justify-center mb-3 text-[#BA2F2F] dark:text-white">
-              <Plus size={18} />
-            </div>
-            <p className="text-xs uppercase tracking-[0.2em] font-semibold text-[#BA2F2F] dark:text-white mb-1">
-              Expanded Repository
-            </p>
-            <p className="text-xs text-[#040101]/75 dark:text-neutral-400">
-              Additional certifications and course completions continuously indexed.
-            </p>
-          </div>
         </div>
       </div>
 
