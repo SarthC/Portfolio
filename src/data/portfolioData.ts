@@ -10,6 +10,7 @@ export interface ProjectItem {
   description: string;
   githubUrl?: string;
   liveUrl?: string;
+  videoDemoUrl?: string;
   featured: boolean;
   isPlaceholder?: boolean;
 }
@@ -190,12 +191,30 @@ export const projects: ProjectItem[] = [
   {
     id: 'docusense',
     title: 'DocuSense AI Agent',
-    tagline: 'Autonomous AI document extraction agent',
+    tagline: 'Autonomous Corporate Research, Compliance & Multi-Registry Verification Agent',
     category: 'AI/ML',
-    techStack: ['Supervity Platform', 'LLMs', 'NLP', 'Prompt Engineering'],
-    impactMetrics: ['95%+ data retrieval accuracy', '70% reduction in manual processing time'],
-    description: 'Built an autonomous AI agent to extract data from complex financial and legal documents. Designed NLP workflows that achieved 95%+ data retrieval accuracy and aggressively cut manual processing time by 70%.',
+    techStack: [
+      'Supervity Auto',
+      'LLMs',
+      'NLP',
+      'Prompt Engineering',
+      'Indian GST Portal',
+      'Zauba Corp / MCA',
+      'Web Search APIs',
+      'Excel Sync',
+      'PDF Generation',
+      'Email Services',
+    ],
+    impactMetrics: [
+      '95%+ data retrieval accuracy on complex financial and legal filings',
+      '70% reduction in manual due diligence and corporate review cycles',
+      'Autonomous multi-registry verification via Indian GST Portal & Zauba Corp / MCA',
+      'Built for CodeQuest 2026 (Round 2) on Supervity Auto platform',
+    ],
+    description:
+      'An autonomous corporate research and compliance agent built on Supervity Auto for CodeQuest 2026 (Round 2). Automates document parsing, registry cross-verification (GST, Zauba Corp), adverse media intelligence, and zero-click compliance report dispatch for B2B due diligence.',
     featured: true,
+    videoDemoUrl: 'https://lnkd.in/p/gby7UJ7c',
   },
   {
     id: 'neverout',

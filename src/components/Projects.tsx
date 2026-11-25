@@ -16,6 +16,7 @@ import {
   Sparkles,
   ShieldCheck,
   Compass,
+  Video,
 } from 'lucide-react';
 
 // ---------------------------------------------------------------------------
@@ -40,6 +41,7 @@ export interface ProjectItem {
   isPlaceholder?: boolean;
   githubUrl?: string;
   liveUrl?: string;
+  videoDemoUrl?: string;
   role?: string;
   timeline?: string;
   detailedOverview?: string;
@@ -215,16 +217,120 @@ const projects: ProjectItem[] = [
   {
     id: 'docusense',
     title: 'DocuSense AI Agent',
-    tagline: 'Autonomous AI document extraction agent',
+    tagline: 'Autonomous Corporate Research, Compliance & Multi-Registry Verification Agent',
     category: 'AI/ML',
-    techStack: ['Supervity Platform', 'LLMs', 'NLP', 'Prompt Engineering'],
+    role: 'Autonomous AI Agent Engineer — CodeQuest 2026 (Round 2)',
+    timeline: 'Mar 2026',
+    featured: true,
+    heroImage: '/assets/projects/docusense/docusense-audit-trail-split.jpg',
+    videoDemoUrl: 'https://lnkd.in/p/gby7UJ7c',
+    techStack: [
+      'Supervity Auto',
+      'LLMs',
+      'NLP',
+      'Prompt Engineering',
+      'Indian GST Portal',
+      'Zauba Corp / MCA',
+      'Web Search APIs',
+      'Dynamic PDF Gen',
+      'Excel Automation',
+      'Email Services',
+    ],
     impactMetrics: [
-      '95%+ data retrieval accuracy on legal and financial documents',
-      '70% reduction in manual document review and processing time',
+      '95%+ data retrieval accuracy on legal filings and complex financial agreements',
+      '70% reduction in manual document review, due diligence, and compliance processing time',
+      'Parallel multi-source entity cross-verification against Indian GST Portal & Zauba Corp / MCA',
+      'Built on Supervity Auto platform with governed step-level DAG execution and live audit trail',
     ],
     description:
-      'Engineered an autonomous AI agent for deep extraction and structuring of financial agreements and legal clauses.',
-    featured: true,
+      'An autonomous corporate research and compliance agent built on Supervity Auto for CodeQuest 2026 (Round 2). Automates document extraction, Indian registry cross-verification, adverse media intelligence, and zero-click compliance report dispatch for B2B due diligence.',
+    detailedOverview:
+      'DocuSense AI Agent is an autonomous corporate research and compliance agent built for CodeQuest 2026 (Round 2) on the Supervity Auto platform. It automates the extraction, cross-verification, and risk analysis of complex financial and legal documents—replacing hours of manual due diligence with a zero-click workflow designed for B2B sales teams and financial analysts. Ingesting raw financial or legal documents, the agent extracts corporate identifiers via LLM-driven NLP, cross-checks registry records across the Indian GST Portal and Zauba Corp / MCA, scans live web APIs for adverse news and positive highlights, synthesizes a unified risk score, and automatically updates Excel records while emailing a structured PDF brief to stakeholders.',
+    problemVsSolution: {
+      problem:
+        'Corporate compliance officers and B2B sales teams spend hours manually combing through unstructured legal documents, navigating disjointed Indian government registries (GST, MCA), and searching web sources to verify company legitimacy and detect risk.',
+      solution:
+        'DocuSense delivers an autonomous, step-level governed agent workflow on Supervity Auto that extracts company parameters, cross-verifies official registries in parallel, scores risk, and dispatches audited PDF reports in minutes with zero manual intervention.',
+    },
+    keyFeatures: [
+      {
+        title: 'Financial & Legal Document Parsing (95%+ Accuracy)',
+        description:
+          'Uses LLM-driven NLP pipelines and structured prompt engineering to extract key fields from unstructured filings, financial statements, and contracts with over 95% data retrieval precision.',
+      },
+      {
+        title: 'Multi-Source Corporate Verification (GST & Zauba Corp)',
+        description:
+          'Autonomously cross-checks extracted corporate entities against authoritative Indian registries: Indian GST Portal for taxpayer status and return filing history, and Zauba Corp / MCA for company status and director signatories.',
+      },
+      {
+        title: 'Web Intelligence & Risk Profiling',
+        description:
+          'Executes parallel search API routines to conduct adverse media queries (fraud, litigation, penalties) and positive business highlights (major deals, contract wins, funding) to assemble a balanced, multi-dimensional risk profile.',
+      },
+      {
+        title: 'Automated Multi-Channel Reporting & Sync (~70% Time Saved)',
+        description:
+          'Synthesizes a composite risk score, writes records to Microsoft Excel on OneDrive, compiles a ready-to-share PDF due diligence report, and dispatches the brief via email to compliance officers.',
+      },
+      {
+        title: 'Governed Step-Level Workflow Execution',
+        description:
+          'Orchestrated on Supervity Auto with visual DAG monitoring, real-time node state progression, output schemas, and an audit trail ensuring reliable enterprise-grade execution.',
+      },
+    ],
+    engineeringChallenges: [
+      {
+        title: 'Parallel Multi-Registry Ingestion & Anti-Scraping Resilience',
+        description:
+          'Engineered asynchronous scraping and lookup routines across government and commercial registries (GST Portal & Zauba Corp), ensuring robust error recovery and schema normalization for varied company structures.',
+      },
+      {
+        title: 'High-Fidelity Information Extraction without Hallucination',
+        description:
+          'Designed constrained prompt templates and step-level output validation gates that force LLM nodes to cite verbatim document clauses, preventing hallucinations on legal entities and financial metrics.',
+      },
+      {
+        title: 'Zero-Click End-to-End Orchestration & Multi-Channel Delivery',
+        description:
+          'Integrated disparate downstream systems—Excel cloud spreadsheets, headless PDF rendering engines, and SMTP email services—into a continuous DAG pipeline executed without manual human intervention.',
+      },
+    ],
+    techStackLayers: [
+      {
+        layer: 'Agent Platform & Orchestration',
+        technologies: ['Supervity Auto', 'Agentic Workgraphs', 'React Flow DAG Engine', 'Audit Trail Telemetry'],
+      },
+      {
+        layer: 'AI & Intelligence',
+        technologies: ['Large Language Models (LLMs)', 'NLP Extraction Pipelines', 'Structured Prompt Engineering', 'Risk Scoring Algorithm'],
+      },
+      {
+        layer: 'Verification & Registry Sources',
+        technologies: ['Indian GST Portal (Taxpayer & Filing Status)', 'Zauba Corp / MCA (Directors & Status)', 'Web Search APIs (Adverse Media & News)'],
+      },
+      {
+        layer: 'Outputs & Automated Delivery',
+        technologies: ['Dynamic PDF Generation', 'Microsoft Excel (OneDrive Database Sync)', 'Automated Email Dispatch Service'],
+      },
+    ],
+    screenshots: [
+      {
+        src: '/assets/projects/docusense/docusense-audit-trail-split.jpg',
+        caption: 'DocuSense Live Workgraph & Audit Trail — Step-level execution tracking GST scraping, Zauba Corp registry lookups, and adverse media queries on Supervity Auto',
+        tag: 'Live Audit Trail',
+      },
+      {
+        src: '/assets/projects/docusense/docusense-workgraph-dag.jpg',
+        caption: 'Full React Flow Workgraph DAG — Parallel verification nodes, risk scoring engine, and multi-channel outputs (Excel, Email, PDF)',
+        tag: 'Workgraph DAG',
+      },
+      {
+        src: '/assets/projects/docusense/docusense-execution-completed.jpg',
+        caption: 'Completed Compliance Pipeline — Real-time state transitions and structured output validation for corporate due diligence',
+        tag: 'Compliance Engine',
+      },
+    ],
   },
   {
     id: 'neverout',
@@ -675,7 +781,20 @@ const ProjectCard: React.FC<{
               Live Demo
             </a>
           ) : null}
-          {!project.githubUrl && !project.liveUrl && !hasExtendedCaseStudy && (
+
+          {project.videoDemoUrl ? (
+            <a
+              href={project.videoDemoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 border border-[#BA2F2F] dark:border-neutral-700 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#040101] dark:text-white hover:bg-[#BA2F2F] hover:text-[#FEFDFD] dark:hover:bg-white dark:hover:text-black transition-all"
+            >
+              <Video size={12} />
+              Video Demo
+            </a>
+          ) : null}
+
+          {!project.githubUrl && !project.liveUrl && !project.videoDemoUrl && !hasExtendedCaseStudy && (
             <span className="text-[11px] uppercase tracking-[0.14em] text-[#040101]/60 dark:text-neutral-600">
               Internal / Repository Pending
             </span>
@@ -780,6 +899,17 @@ const CaseStudyModal: React.FC<{
                   >
                     <ExternalLink size={12} />
                     Live Demo
+                  </a>
+                )}
+                {project.videoDemoUrl && (
+                  <a
+                    href={project.videoDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 bg-[#BA2F2F] text-white px-3 py-1 font-semibold uppercase tracking-wider hover:bg-black transition-all"
+                  >
+                    <Video size={12} />
+                    Video Demo
                   </a>
                 )}
               </div>
