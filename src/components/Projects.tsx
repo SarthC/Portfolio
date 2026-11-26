@@ -524,7 +524,7 @@ const projects: ProjectItem[] = [
     title: 'DukaanVoice',
     tagline: 'Voice-activated multilingual billing assistant',
     category: 'Voice AI',
-    techStack: ['Web Speech API', 'React', 'Node.js', 'Speech Recognition'],
+    techStack: ['Web Speech API', 'React', 'Node.js', 'Speech Recognition', 'llama 3.3'],
     impactMetrics: [
       'Winner of Open Source Track at HackStorm 2026',
       'Hands-free voice recognition for high-frequency retail transactions',
