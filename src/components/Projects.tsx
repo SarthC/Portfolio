@@ -498,26 +498,163 @@ const projects: ProjectItem[] = [
   },
   {
     id: 'pofix',
-    title: 'Pofix',
-    tagline: 'Crowdsourced road-safety app with real-time hazard verification',
+    title: 'POFIX',
+    tagline: 'AI-Powered Civic Road Safety, Edge Pothole Verification & Real-Time Driver Navigation Alerts',
     category: 'Computer Vision',
+    role: 'Full Stack & AI Developer',
+    timeline: '2026',
+    featured: true,
+    heroImage: '/assets/projects/pofix/pofix-drive-safe-active.jpg',
+    githubUrl: 'https://github.com/SarthC/Pothole-Dealers',
+    liveUrl: 'https://po-fix.vercel.app/',
     techStack: [
-      'MobileNet V2',
-      'Firebase',
-      'OpenStreetMap API',
-      'React',
-      'Node.js',
-      'SendGrid',
-      'EmailJS',
+      'React 18',
+      'Vite',
+      'TensorFlow.js',
+      'MobileNet',
+      'Leaflet.js',
+      'React-Leaflet',
+      'Leaflet.heat',
+      'Firebase Realtime DB',
+      'Firebase Auth',
+      'Web Speech API',
+      'Geolocation API',
+      'ExifReader',
+      'PWA',
     ],
     impactMetrics: [
-      'MobileNet V2 computer vision model for road defect classification',
-      'Real-time driver alerts mapped via OpenStreetMap API',
-      'Automated municipal hazard notifications via SendGrid & EmailJS',
+      'In-browser edge AI verification with TensorFlow.js & MobileNet blocking non-road spam uploads',
+      'Hands-free "Drive Safe" real-time voice alerts via Web Speech API announcing hazards within 200m',
+      'Municipal repair prioritization engine weighted by severity, frequency, road type & aging',
+      'Automated EXIF GPS metadata extraction & temporal validation enforcing freshness within 48 hours',
     ],
     description:
-      'Built a crowdsourced road-safety system with real-time driver warnings and automated municipal dispatch for detected potholes.',
-    featured: true,
+      'An AI-powered civic-tech and smart navigation platform that automates pothole reporting, prioritizes municipal road repairs, and delivers real-time voice alerts to drivers using edge computer vision and geospatial heatmaps.',
+    detailedOverview:
+      'POFIX bridges the gap between daily commuters and road maintenance authorities through a community-driven, AI-verified infrastructure platform. By running client-side computer vision to validate road damage and prevent spam, POFIX generates dynamic priority heatmaps for municipal repair teams while offering a hands-free "Drive Safe" navigation mode with audio hazard warnings for drivers. Citizens can snap road defects in under 30 seconds with automated EXIF GPS tagging, while municipal corporations and contractors leverage weighted priority algorithms to repair dangerous arterial corridors first.',
+    problemVsSolution: {
+      problem:
+        'Municipal pothole reporting portals suffer from massive volumes of spam photos, lack accurate GPS metadata, and leave citizens waiting weeks without updates, while commuters hit hazardous potholes causing vehicle damage and fatal accidents.',
+      solution:
+        'POFIX runs client-side TensorFlow.js MobileNet inference to block non-road images instantly, auto-extracts EXIF GPS coordinates, calculates dynamic municipal repair priorities, and delivers real-time voice hazard warnings to drivers within 200 meters.',
+    },
+    keyFeatures: [
+      {
+        title: 'Client-Side AI Verification (Edge AI)',
+        description:
+          'In-browser image classification using TensorFlow.js & MobileNet for instant verification with zero server latency. Multi-layer anti-spam guardrails reject irrelevant images (faces, food, documents, cosplay/masks) and enforce road/asphalt confidence thresholds.',
+      },
+      {
+        title: 'Metadata & Geo-Fencing Validation',
+        description:
+          'Automated EXIF parsing via ExifReader extracts exact GPS coordinates and capture timestamps directly from image metadata, with temporal verification requiring photos to be taken within 48 hours to guarantee freshness.',
+      },
+      {
+        title: '"Drive Safe" Real-Time Audio Navigation',
+        description:
+          'Background tracking using the HTML5 Geolocation API scans for road hazards within a 500m radius. Hands-free voice alerts via the Web Speech API (Text-to-Speech) alert drivers within 200m of approaching hazards to prevent accidents and vehicle damage.',
+      },
+      {
+        title: 'Municipal Heatmap & Smart Prioritization Engine',
+        description:
+          'Geospatial visualization powered by Leaflet & Leaflet.heat rendering density gradients across cities. Weighted algorithmic scoring calculates repair urgency based on report frequency, severity, road type (Highway/City/Residential), and days pending.',
+      },
+      {
+        title: 'End-to-End Repair & Contractor Lifecycle',
+        description:
+          'Workflow tracking across Pending -> In Progress -> Resolved states with contractor watchlist tracking, agency task allocation, and verified resolution proofs.',
+      },
+      {
+        title: 'Progressive Web App (PWA) Architecture',
+        description:
+          'Responsive, high-contrast dark UI designed with React and Framer Motion, featuring multi-step guided reporting flows and client-side canvas image optimization.',
+      },
+    ],
+    engineeringChallenges: [
+      {
+        title: 'Zero-Latency Edge Spam Filtering with TensorFlow.js',
+        description:
+          'Running cloud vision models on high-volume user uploads causes latency and API costs; engineered in-browser inference using lightweight MobileNet to classify asphalt texture and reject invalid imagery locally before cloud sync.',
+      },
+      {
+        title: 'Hands-Free Low-Battery Geofencing Navigation',
+        description:
+          'Designed an event-driven radius scanner with the Geolocation API and Web Speech synthesis, throttling spatial distance computations to conserve mobile battery while ensuring reliable 200m audio warnings at highway speeds.',
+      },
+      {
+        title: 'Multi-Factor Municipal Priority Scoring Algorithm',
+        description:
+          'Constructed a mathematical priority model that balances crowd report clustering, hazard severity classifications, road transit tiers, and unresolved duration to optimize public works repair queues.',
+      },
+    ],
+    techStackLayers: [
+      {
+        layer: 'Frontend Framework & UI',
+        technologies: ['React 18', 'Vite', 'React Router 6', 'Glassmorphism Design System', 'Framer Motion'],
+      },
+      {
+        layer: 'Edge AI & Computer Vision',
+        technologies: ['TensorFlow.js', 'MobileNet (Client-side inference)', 'Anti-Spam Classifier', 'Canvas Optimization'],
+      },
+      {
+        layer: 'Geospatial & Mapping',
+        technologies: ['Leaflet.js', 'React-Leaflet', 'Leaflet.heat', 'OpenStreetMap', 'Haversine Geofencing'],
+      },
+      {
+        layer: 'Cloud Backend & Storage',
+        technologies: ['Firebase Realtime Database', 'Firebase Authentication', 'Firebase Cloud Storage'],
+      },
+      {
+        layer: 'Browser APIs & Device Integration',
+        technologies: ['Web Speech API (Voice Synthesis)', 'HTML5 Geolocation API', 'ExifReader (EXIF Metadata)', 'Camera API'],
+      },
+      {
+        layer: 'App Architecture & Deployment',
+        technologies: ['Progressive Web App (PWA)', 'Vercel Deployment', 'Service Workers'],
+      },
+    ],
+    screenshots: [
+      {
+        src: '/assets/projects/pofix/pofix-drive-safe-active.jpg',
+        caption: 'Drive Safe Real-Time Navigation — Live hazard monitoring with 200m alert radius, speech synthesis voice warnings, and severity pins',
+        tag: 'Drive Safe Mode',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-ai-spam-rejection.jpg',
+        caption: 'Edge AI Spam Prevention — TensorFlow.js MobileNet guardrail instantly rejecting non-road damage uploads (detected mask/cosplay) client-side',
+        tag: 'Edge Vision AI',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-ai-image-verification.jpg',
+        caption: 'Client-Side Damage Verification — Instant road defect verification with EXIF geolocation extraction in Baner, Pune',
+        tag: 'Pothole Verification',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-community-dashboard.jpg',
+        caption: 'Community & Contractor Dashboard — Repair ticket lifecycles (Pending/In Progress/Fixed), municipal watchlist, and task allocation',
+        tag: 'Municipal Hub',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-how-it-works-stats.png',
+        caption: 'Resolution Telemetry & 4-Step Flow — Spot, Snap, Send, Solved workflow with live municipal resolution tracking',
+        tag: 'Workflow & Metrics',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-drive-safe-map.jpg',
+        caption: 'Geospatial Hazard Radius Mapping — 500m scan zone & 200m critical alert threshold mapped on OpenStreetMap',
+        tag: 'Geospatial Radar',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-report-pothole-verified.jpg',
+        caption: 'Verified Road Defect Submission — Automated landmark reverse-geocoding and GPS coordinate mapping',
+        tag: 'Geo-Tagging',
+      },
+      {
+        src: '/assets/projects/pofix/pofix-hero-landing.jpg',
+        caption: 'POFIX Platform Landing — "See a Pothole? Snap. Send. Solved." civic reporting portal',
+        tag: 'Platform Portal',
+      },
+    ],
   },
   {
     id: 'dukaanvoice',
